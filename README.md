@@ -1,2 +1,2 @@
-# autoKnoXSS
-Wrapper KnoXSS API
+# autoKNOXSS
+Wrapper KNOXSS API

@@ -10,7 +10,7 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{re
 
 Do you know $\large\color{purple}{\textsf{KNOXSS}}$?
 
-$\large\color{purple}{\textsf{KNOXSS}}$ has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.*
+*KNOXSS has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.*
 
 More info: [KNOXSS](https://knoxss.me/)
 
@@ -51,9 +51,9 @@ URL3                              DATA3
 BLANK                             BLANK
 ```
 
-Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on. Like this:
+Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on. Just like this:
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/04.gif)
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/04.png)
 
 - NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 

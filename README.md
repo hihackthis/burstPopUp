@@ -120,7 +120,7 @@ Another thing, whenever autoKNOXSS is run it will create two files: curl.err and
 
 For example, if you decide not to include a file to store the results, the following message will be logged in curl.err:
 
-tee: '': No such file or directory
+> tee: '': No such file or directory
 
 - NOTE: Logged errors will not be overwritten, but logged on the next line.
 

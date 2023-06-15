@@ -1,10 +1,12 @@
 # autoKNOXSS
 
-autoKNOXSS a wrapper KNOXSS API
+**autoKNOXSS** a wrapper $\textcolor{red}{\textsf{KNOXSS API}}$
+
+${\color{red}KNOXSS API}$
 
 ## About autoKNOXSS
 
-autoKNOXSS is a tool that uses a KNOXSS API and automates all tasks easily and quickly.
+**autoKNOXSS** is a tool that uses a $\textcolor{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
 
 Do you know KNOXSS?
 
@@ -18,7 +20,7 @@ More info: [KNOXSS API](https://knoxss.me/?page_id=2729)
 
 ## How to use
 
-autoKNOXSS is really simple to use:
+**autoKNOXSS** is really simple to use:
 
 1. Enter your KNOXSS API
 2. Choose a request method (GET or POST)
@@ -51,7 +53,7 @@ ESPACE                            ESPACE
 
 Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in A has its data corresponding to the first line in B; the second URL of A has its corresponding data on the second line in B, and so on.
 
-- NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by autoKNOXSS.
+- NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by **autoKNOXSS**.
 
 - NOTE2:  you can enter the filename by absolute or relative path.
 
@@ -65,7 +67,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 ## Cookies and headers names and values
 
-You don't need to escape any special character contained in cookie and header names and values. For example, if use a User-Agent, then it looks like this:
+You don't need to escape any special character contained in cookie and header names and values. For example, if use a ***User-Agent***, then it looks like this:
 
 > Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
 
@@ -79,7 +81,7 @@ About the names and values of cookies and headers, autoKNOXSS follows the standa
 
 ## Flash Mode
 
-autoKNOXSS does all the tests allowed in this mode, and all of them, in an automated way.
+**autoKNOXSS** does all the tests allowed in this mode, and all of them, in an automated way.
 
 ```
 a) param=value[XSS]
@@ -88,7 +90,7 @@ c) /[XSS]?param=value
 d) header:[XSS]
 ```
 
-- NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of autoKNOXSS.
+- NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of **autoKNOXSS**.
 
 Ex:
 ```
@@ -101,7 +103,7 @@ p1=[XSS]&p2=[XSS]&p2=[XSS]
 
 ## AFB
 
-autoKNOXSS does all tests allowed in this mode in an automated way.
+**autoKNOXSS** does all tests allowed in this mode in an automated way.
 
 ## Output and Logs
 

@@ -61,7 +61,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - NOTA5: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
-- NOTE6: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the autoKNOXSS is prepared to do that itself.
+- NOTE6: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the autoKNOXSS is prepared to do that itself. :vulcan_salute:
 
 ## Cookies and headers names and values
 
@@ -71,7 +71,7 @@ You don't need to escape any special character contained in cookie and header na
 
 In this case, does not necessarily escape the forward slash [ / ] and the parentheses [ ( ) ].
 
-About the names and values of cookies and headers, autoKNOXSS follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex.
+About the names and values of cookies and headers, autoKNOXSS follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
 
 - NOTE1: It's good to know that the User-Agent arriving at the client is the one being sent by KNOXSS, that means that if you add a User-Agent then two User-Agents will arrive at the client, the one from KNOXSS and yours.
 
@@ -109,14 +109,12 @@ After you add the filename containing the URLs, autoKNOXSS will ask if you want 
 
 The screen output is fully customized by autoKNOXSS as its main objective is to show in a few lines the result(s) obtained.
 
-The file output is more verbose, is the traditional output of KNOXSS API, so in this file, you will have more details of the results, you will make your own debug and select content using, for example, the grep command.
-
 The file output is more verbose, it is the traditional output of the KNOXSS API, so in this file, you will have more details of the results, so that you can later do your own debugging and select contents using, for example, the grep command.
 
 Another thing, whenever autoKNOXSS is run it will create two files: curl.err and jq.err.
 
-- [x] curl.err: this will log all errors in the KNOXSS API curl command
-- [x] jq.err: this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
+:ballot_box_with_check: curl.err: this will log all errors in the KNOXSS API curl command
+:ballot_box_with_check: jq.err: this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
 
 For example, if you decide not to include a file to store the results, the following message will be logged in curl.err:
 

@@ -36,6 +36,9 @@ URL2
 URL3
 BLANK
 ```
+Look this:
+
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/05.png)
 
 If you choose the POST method then you must provide two filenames:
 
@@ -55,17 +58,17 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/04.png)
 
-- NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
+- **NOTE1**: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
-- NOTE2:  you can enter the filename by absolute or relative path.
+- **NOTE2**:  you can enter the filename by absolute or relative path.
 
-- NOTE3: if the filename contains space(s) then just type the filename with the space(s). Ex: urls GET
+- **NOTE3**: if the filename contains space(s) then just type the filename with the space(s). Ex: urls GET
 
-- NOTE4: if the path file contains space(s) then just type the file path with the space(s). Ex: /home/BLA BLA/
+- **NOTE4**: if the path file contains space(s) then just type the file path with the space(s). Ex: /home/BLA BLA/
 
-- NOTA5: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
+- **NOTE5**: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
-- NOTE6: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ is prepared to do that itself. :vulcan_salute:
+- **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ is prepared to do that itself. :vulcan_salute:
 
 ## Cookies and headers names and values
 
@@ -77,9 +80,9 @@ In this case, does not necessarily escape the forward slash [ / ] and the parent
 
 About the names and values of cookies and headers, $\large\color{cyan}{\textsf{autoKNOXSS}}$ follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
 
-- NOTE1: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
+- **NOTE1**: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
 
-- NOTE2: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
+- **NOTE2**: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
 
 ## Flash Mode
 
@@ -92,7 +95,7 @@ c) /[XSS]?param=value
 d) header:[XSS]
 ```
 
-- NOTE1: all parameters will be tested with **[XSS]**, it is still not possible to choose which parameter will receive **[XSS]**, at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
+- **NOTE1**: all parameters will be tested with **[XSS]**, it is still not possible to choose which parameter will receive **[XSS]**, at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
 Ex:
 ```
@@ -101,9 +104,9 @@ p1=[XSS]&p2=[XSS]
 p1=[XSS]&p2=[XSS]&p2=[XSS]
 ```
 
-- NOTE2: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you.
+- **NOTE2**: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you.
 
-## AFB
+## Advanced Filter Bypass
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ does all tests allowed in this mode in an automated way.
 
@@ -133,7 +136,7 @@ For example, if you decide not to include a file to store the results, the follo
 
 > tee: '': No such file or directory
 
-- NOTE: Logged errors will not be overwritten, but logged on the next line.
+- **NOTE**: Logged errors will not be overwritten, but logged on the next line.
 
 ## Firewall
 

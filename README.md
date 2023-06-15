@@ -115,8 +115,8 @@ The file output is more verbose, it is the traditional output of the KNOXSS API,
 
 Another thing, whenever autoKNOXSS is run it will create two files: curl.err and jq.err.
 
-- [x] curl.err ==> this will log all errors in the KNOXSS API curl command
-- [x] jq.err ==> this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
+- [x] curl.err: this will log all errors in the KNOXSS API curl command
+- [x] jq.err: this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
 
 For example, if you decide not to include a file to store the results, the following message will be logged in curl.err:
 

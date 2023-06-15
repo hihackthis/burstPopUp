@@ -28,10 +28,12 @@ If you choose the GET method then you must provide a filename containing one or 
 
 Example:
 
+```
 URL1
 URL2
 URL3
 ESPACE
+```
 
 If you choose the POST method then you must provide two filenames:
 
@@ -39,12 +41,13 @@ the first filename (A), and always the first, must contain one or more URLs one 
 the second filename (B), and always the second, must contain the parameters (data) one below the other of their respective URLs.
 
 Like this:
-
-  (A)                                   (B)
+```
+(A)                                (B)
 URL1                              DATA1
 URL2                              DATA2
 URL3                              DATA3
-ESPACE                         ESPACE
+ESPACE                            ESPACE
+```
 
 Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in A has its data corresponding to the first line in B; the second URL of A has its corresponding data on the second line in B, and so on.
 
@@ -108,8 +111,8 @@ The file output is more verbose, it is the traditional output of the KNOXSS API,
 
 Another thing, whenever autoKNOXSS is run it will create two files: curl.err and jq.err.
 
-[x] curl.err ==> this will log all errors in the KNOXSS API curl command
-[x] jq.err ==> this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
+- [x] curl.err ==> this will log all errors in the KNOXSS API curl command
+- [x] jq.err ==> this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
 
 For example, if you decide not to include a file to store the results, the following message will be logged in curl.err:
 

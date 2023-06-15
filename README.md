@@ -1,6 +1,6 @@
 # autoKNOXSS
 
-- Wrapper KNOXSS API
+autoKNOXSS a wrapper KNOXSS API
 
 ## About autoKNOXSS
 
@@ -8,11 +8,11 @@ autoKNOXSS is a tool that uses a KNOXSS API and automates all tasks easily and q
 
 Do you know KNOXSS?
 
-KNOXSS has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.
+*KNOXSS has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.*
 
 More info: [KNOXSS](https://knoxss.me/)
 
-KNOXSS API is another way to query KNOXSS system if it can find and prove an XSS vulnerability in a given target page.
+*KNOXSS API is another way to query KNOXSS system if it can find and prove an XSS vulnerability in a given target page.*
 
 More info: [KNOXSS API](https://knoxss.me/?page_id=2729)
 
@@ -37,7 +37,7 @@ ESPACE
 
 If you choose the POST method then you must provide two filenames:
 
-the first filename (A), and always the first, must contain one or more URLs one below the other. DO NOT put the URL with the GET method here.
+The first filename (A), and always the first, must contain one or more URLs one below the other. DO NOT put the URL with the GET method here.
 the second filename (B), and always the second, must contain the parameters (data) one below the other of their respective URLs.
 
 Like this:
@@ -67,7 +67,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 You don't need to escape any special character contained in cookie and header names and values. For example, if use a User-Agent, then it looks like this:
 
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+> Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
 
 In this case, does not necessarily escape the forward slash [ / ] and the parentheses [ ( ) ].
 

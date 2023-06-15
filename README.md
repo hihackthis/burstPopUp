@@ -34,7 +34,7 @@ Example:
 URL1
 URL2
 URL3
-ESPACE
+BLANK
 ```
 
 If you choose the POST method then you must provide two filenames:
@@ -48,10 +48,12 @@ Like this:
 URL1                              DATA1
 URL2                              DATA2
 URL3                              DATA3
-ESPACE                            ESPACE
+BLANK                             BLANK
 ```
 
-Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on.
+Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on. Like this:
+
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/04.gif)
 
 - NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
@@ -115,11 +117,11 @@ The file output is more verbose, it is the traditional output of the $\large\col
 
 ***Screen Output***
 
-![Screen Output](https://github.com/hihackthis/autoKNOXSS/blob/main/images/02.png)
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/02.png)
 
 ***File Output***
 
-![File Output](https://github.com/hihackthis/autoKNOXSS/blob/main/images/03.png)
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/03.png)
 
 Another thing, whenever $\large\color{cyan}{\textsf{autoKNOXSS}}$ is run it will create two files: curl.err and jq.err.
 

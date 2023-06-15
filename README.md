@@ -1,16 +1,14 @@
 # autoKNOXSS
 
-**autoKNOXSS** a wrapper $\textcolor{red}{\textsf{KNOXSS API}}$
-
-${\color{red}KNOXSS API}$
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ a wrapper $\large\color{red}{\textsf{KNOXSS API}}$
 
 ## About autoKNOXSS
 
-**autoKNOXSS** is a tool that uses a $\textcolor{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
 
-Do you know KNOXSS?
+Do you know $\large\color{purple}{\textsf{KNOXSS}}$?
 
-*KNOXSS has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.*
+$\large\color{purple}{\textsf{KNOXSS}}$ has a high level of confidence by design. It has almost zero false positive rates and a low false negative rate regarding its XSS coverage.*
 
 More info: [KNOXSS](https://knoxss.me/)
 
@@ -20,9 +18,9 @@ More info: [KNOXSS API](https://knoxss.me/?page_id=2729)
 
 ## How to use
 
-**autoKNOXSS** is really simple to use:
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ is really simple to use:
 
-1. Enter your KNOXSS API
+1. Enter your $\large\color{red}{\textsf{KNOXSS API}}$
 2. Choose a request method (GET or POST)
 3. Enter the [PATH/]filename and DO NOT put it between quotes
 
@@ -39,8 +37,8 @@ ESPACE
 
 If you choose the POST method then you must provide two filenames:
 
-The first filename (A), and always the first, must contain one or more URLs one below the other. DO NOT put the URL with the GET method here.
-the second filename (B), and always the second, must contain the parameters (data) one below the other of their respective URLs.
+The first filename **(A)**, and always the first, must contain one or more URLs one below the other. DO NOT put the URL with the GET method here.
+the second filename **(B)**, and always the second, must contain the parameters (data) one below the other of their respective URLs.
 
 Like this:
 ```
@@ -51,9 +49,9 @@ URL3                              DATA3
 ESPACE                            ESPACE
 ```
 
-Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in A has its data corresponding to the first line in B; the second URL of A has its corresponding data on the second line in B, and so on.
+Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on.
 
-- NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by **autoKNOXSS**.
+- NOTE1: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
 - NOTE2:  you can enter the filename by absolute or relative path.
 
@@ -63,7 +61,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - NOTA5: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
-- NOTE6: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the autoKNOXSS is prepared to do that itself. :vulcan_salute:
+- NOTE6: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ is prepared to do that itself. :vulcan_salute:
 
 ## Cookies and headers names and values
 
@@ -73,15 +71,15 @@ You don't need to escape any special character contained in cookie and header na
 
 In this case, does not necessarily escape the forward slash [ / ] and the parentheses [ ( ) ].
 
-About the names and values of cookies and headers, autoKNOXSS follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
+About the names and values of cookies and headers, $\large\color{cyan}{\textsf{autoKNOXSS}}$ follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
 
-- NOTE1: It's good to know that the User-Agent arriving at the client is the one being sent by KNOXSS, that means that if you add a User-Agent then two User-Agents will arrive at the client, the one from KNOXSS and yours.
+- NOTE1: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
 
-- NOTE2: the autoKNOXSS accepts one cookie and one or more headers.
+- NOTE2: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
 
 ## Flash Mode
 
-**autoKNOXSS** does all the tests allowed in this mode, and all of them, in an automated way.
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ does all the tests allowed in this mode, and all of them, in an automated way.
 
 ```
 a) param=value[XSS]
@@ -90,7 +88,7 @@ c) /[XSS]?param=value
 d) header:[XSS]
 ```
 
-- NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of **autoKNOXSS**.
+- NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
 Ex:
 ```
@@ -103,21 +101,21 @@ p1=[XSS]&p2=[XSS]&p2=[XSS]
 
 ## AFB
 
-**autoKNOXSS** does all tests allowed in this mode in an automated way.
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ does all tests allowed in this mode in an automated way.
 
 ## Output and Logs
 
-After you add the filename containing the URLs, autoKNOXSS will ask if you want to add a file to save the output, that is, a result in addition to the one shown on the screen. Close attention now, we have to notice a big difference between one (screen output) and the other (file output).
+After you add the filename containing the URLs, $\large\color{cyan}{\textsf{autoKNOXSS}}$ will ask if you want to add a file to save the output, that is, a result in addition to the one shown on the screen. Close attention now, we have to notice a big difference between one (screen output) and the other (file output).
 
-The screen output is fully customized by autoKNOXSS as its main objective is to show in a few lines the result(s) obtained.
+The screen output is fully customized by $\large\color{cyan}{\textsf{autoKNOXSS}}$ as its main objective is to show in a few lines the result(s) obtained.
 
-The file output is more verbose, it is the traditional output of the KNOXSS API, so in this file, you will have more details of the results, so that you can later do your own debugging and select contents using, for example, the grep command.
+The file output is more verbose, it is the traditional output of the $\large\color{red}{\textsf{KNOXSS API}}$, so in this file, you will have more details of the results, so that you can later do your own debugging and select contents using, for example, the grep command.
 
-Another thing, whenever autoKNOXSS is run it will create two files: curl.err and jq.err.
+Another thing, whenever $\large\color{cyan}{\textsf{autoKNOXSS}}$ is run it will create two files: curl.err and jq.err.
 
-:ballot_box_with_check: curl.err: this will log all errors in the KNOXSS API curl command
+:ballot_box_with_check: curl.err: this will log all errors in the $\large\color{red}{\textsf{KNOXSS API}}$ curl command
 
-:ballot_box_with_check: jq.err: this will log any errors in the jq command in the JSON output of the KNOXSS API curl command
+:ballot_box_with_check: jq.err: this will log any errors in the jq command in the JSON output of the $\large\color{red}{\textsf{KNOXSS API}}$ curl command
 
 For example, if you decide not to include a file to store the results, the following message will be logged in curl.err:
 
@@ -127,4 +125,4 @@ For example, if you decide not to include a file to store the results, the follo
 
 ## Firewall
 
-Some firewalls block the KNOXSS API, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, autoKNOXSS hides the output, it will be sent to limbo, the /dev/null.
+Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ hides the output, it will be sent to limbo, the /dev/null.

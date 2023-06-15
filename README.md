@@ -2,7 +2,11 @@
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper.
 
+<div align="center">
+  
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/01.png)
+
+</div>
 
 ## About autoKNOXSS
 

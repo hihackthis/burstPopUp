@@ -81,17 +81,21 @@ About the names and values of cookies and headers, autoKNOXSS follows the standa
 
 autoKNOXSS does all the tests allowed in this mode, and all of them, in an automated way.
 
+```
 a) param=value[XSS]
 b) param=[XSS]
 c) /[XSS]?param=value 
 d) header:[XSS]
+```
 
 - NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of autoKNOXSS.
 
 Ex:
+```
 p1=[XSS]
 p1=[XSS]&p2=[XSS]
 p1=[XSS]&p2=[XSS]&p2=[XSS]
+```
 
 - NOTE2: you don't need to add the [XSS], because the autoKNOXSS does that for you.
 

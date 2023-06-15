@@ -2,6 +2,8 @@
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ a wrapper $\large\color{red}{\textsf{KNOXSS API}}$
 
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/01.gif)
+
 ## About autoKNOXSS
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
@@ -110,6 +112,14 @@ After you add the filename containing the URLs, $\large\color{cyan}{\textsf{auto
 The screen output is fully customized by $\large\color{cyan}{\textsf{autoKNOXSS}}$ as its main objective is to show in a few lines the result(s) obtained.
 
 The file output is more verbose, it is the traditional output of the $\large\color{red}{\textsf{KNOXSS API}}$, so in this file, you will have more details of the results, so that you can later do your own debugging and select contents using, for example, the grep command.
+
+***Screen Output***
+
+![Screen Output](https://github.com/hihackthis/autoKNOXSS/blob/main/images/02.png)
+
+***File Output***
+
+![File Output](https://github.com/hihackthis/autoKNOXSS/blob/main/images/03.png)
 
 Another thing, whenever $\large\color{cyan}{\textsf{autoKNOXSS}}$ is run it will create two files: curl.err and jq.err.
 

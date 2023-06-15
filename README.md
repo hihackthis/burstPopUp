@@ -88,7 +88,7 @@ c) /[XSS]?param=value
 d) header:[XSS]
 ```
 
-- NOTE1: all parameters will be tested with [XSS], it is still not possible to choose which parameter will receive [XSS], at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
+- NOTE1: all parameters will be tested with **[XSS]**, it is still not possible to choose which parameter will receive **[XSS]**, at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
 Ex:
 ```
@@ -97,7 +97,7 @@ p1=[XSS]&p2=[XSS]
 p1=[XSS]&p2=[XSS]&p2=[XSS]
 ```
 
-- NOTE2: you don't need to add the [XSS], because the autoKNOXSS does that for you.
+- NOTE2: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you.
 
 ## AFB
 

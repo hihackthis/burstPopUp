@@ -1,6 +1,6 @@
 # autoKNOXSS
 
-$\large\color{cyan}{\textsf{autoKNOXSS}}$ a wrapper $\large\color{red}{\textsf{KNOXSS API}}$
+$\large\color{cyan}{\textsf{autoKNOXSS}}$ is a wrapper $\large\color{red}{\textsf{KNOXSS API}}$
 
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/01.png)
 

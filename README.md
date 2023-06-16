@@ -11,6 +11,25 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 </div>
 
+### Summary
+
+
+:small_blue_diamond: [About autoKNOXSS](#about-autoknoxss)
+
+:small_blue_diamond: [How to install](#how-to-install)
+
+:small_blue_diamond: [How to use](#how-to-use)
+
+:small_blue_diamond: [Cookies and headers names and values](#cookies-and-headers-names-and-values)
+
+:small_blue_diamond: [Flash Mode](#flash-mode)
+
+:small_blue_diamond: [Advanced Filter Bypass](#advanced-filter-bypass)
+
+:small_blue_diamond: [Output and Logs](#output-and-logs)
+
+:small_blue_diamond: [Firewall](#firewall)
+
 ## About autoKNOXSS
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.

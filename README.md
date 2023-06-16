@@ -37,7 +37,7 @@ Very easy, doesn't need to install, just:
    - ./autoKNOXSS.sh
 ```
 
-**NOTE**: $\large\color{cyan}{\textsf{autoKNOXSS}}$ does use the **jq** tool. :point_left:
+**NOTE**: $\large\color{cyan}{\textsf{autoKNOXSS}}$ does use the **jq** tool. :warning:
 
 ## How to use
 

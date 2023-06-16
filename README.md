@@ -2,6 +2,9 @@
 
 <div align="center">
 
+![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v1.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/build-passing-yellow)
+
+
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper.
   
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/01.png)

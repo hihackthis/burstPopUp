@@ -181,3 +181,5 @@ For example, if you decide not to include a file to store the results, the follo
 ## Firewall
 
 Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ hides the output, it will be sent to limbo, the /dev/null.
+
+[!["Buy Me A Cake"](https://github.com/hihackthis/autoKNOXSS/blob/main/images/06.png)](https://bmc.link/moicanodieQ)

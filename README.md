@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v1.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/made-brazil-red)
+![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v1.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/made-brazil-red)
 
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper.
@@ -24,6 +24,20 @@ More info: [KNOXSS](https://knoxss.me/)
 *KNOXSS API is another way to query KNOXSS system if it can find and prove an XSS vulnerability in a given target page.*
 
 More info: [KNOXSS API](https://knoxss.me/?page_id=2729)
+
+## How to install
+
+Very easy, doesn't need to install, just:
+
+```
+1. clone this repo:
+   - git clone https://github.com/hihackthis/autoKNOXSS
+2. $ cd autoKNOXSS/
+3. chmod +x autoKNOXSS.sh
+   - ./autoKNOXSS.sh
+```
+
+**NOTE**: $\large\color{cyan}{\textsf{autoKNOXSS}}$ does use the **jq** tool. :point_left:
 
 ## How to use
 

@@ -110,7 +110,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - **NOTE5**: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
-- **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ is prepared to do that itself. :vulcan_salute:
+- **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :vulcan_salute:
 
 ## Cookies and headers names and values
 

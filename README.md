@@ -30,6 +30,8 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 :small_blue_diamond: [Firewall](#firewall)
 
+:small_blue_diamond: [Final Words](#final-words)
+
 ## About autoKNOXSS
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
@@ -184,9 +186,7 @@ Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this cras
 
 ## Final words 
 
-I hope this tool is useful.
-
-Have fun :sunglasses:
+Have fun! :sunglasses:
 
 <div align="center">
 

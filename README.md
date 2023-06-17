@@ -30,7 +30,7 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 :small_blue_diamond: [Firewall](#firewall)
 
-:small_blue_diamond: [Final Words](#final-words)
+:small_blue_diamond: [Final words](#final-words)
 
 ## About autoKNOXSS
 

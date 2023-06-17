@@ -186,14 +186,14 @@ Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this cras
 
 ## Final words 
 
-Have fun! :sunglasses:
+Have fun! :money_mouth_face:
 
 <div align="center">
 
 [!["Buy Me A Cake"](https://github.com/hihackthis/autoKNOXSS/blob/main/images/06.png)](https://bmc.link/moicanodieQ) 
 
-[!["Paypal"]()](https://www.paypal.com/donate/?hosted_button_id=UC7N8XFXNQCPA)
+[!["Paypal"](https://github.com/hihackthis/autoKNOXSS/blob/main/images/07.png)](https://www.paypal.com/donate/?hosted_button_id=UC7N8XFXNQCPA)
 
 </div>
 
-Heartfelt thanks
+Heartfelt thanks :sunglasses:

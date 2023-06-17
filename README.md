@@ -146,7 +146,7 @@ p1=[XSS]&p2=[XSS]
 p1=[XSS]&p2=[XSS]&p2=[XSS]
 ```
 
-- **NOTE2**: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you.
+- **NOTE2**: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :heart_eyes:
 
 ## Advanced Filter Bypass
 

@@ -28,7 +28,7 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 :small_blue_diamond: [Output and Logs](#output-and-logs)
 
-:small_blue_diamond: [Firewall](#firewall)
+:small_blue_diamond: [Firewall and WAF](#firewall-and-waf)
 
 :small_blue_diamond: [Final words](#final-words)
 
@@ -122,9 +122,13 @@ In this case, does not necessarily escape the forward slash [ / ] and the parent
 
 About the names and values of cookies and headers, $\large\color{cyan}{\textsf{autoKNOXSS}}$ follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
 
-- **NOTE1**: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
+- **NOTE1**: the regex controls which characters are allowed, and not how you write them. So if you write 'Host' like this, it will be sent to $\large\color{cyan}{\textsf{autoKNOXSS}}$ like this.
 
-- **NOTE2**: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
+- **NOTE2**: Be careful with the Host header as it can crash some requests made by $\large\color{purple}{\textsf{KNOXSS}}$.
+
+- **NOTE3**: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
+
+- **NOTE4**: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
 
 ## Flash Mode
 
@@ -180,7 +184,7 @@ For example, if you decide not to include a file to store the results, the follo
 
 - **NOTE**: Logged errors will not be overwritten, but logged on the next line.
 
-## Firewall
+## Firewall and WAF
 
 Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ shows the following output:
 

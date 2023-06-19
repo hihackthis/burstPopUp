@@ -182,7 +182,13 @@ For example, if you decide not to include a file to store the results, the follo
 
 ## Firewall
 
-Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ hides the output, it will be sent to limbo, the /dev/null.
+Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ shows the following output:
+
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/09.png)
+
+Now, if you see the output in the file (if you added it) will be:
+
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/08.png)
 
 ## Final words 
 

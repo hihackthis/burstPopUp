@@ -102,7 +102,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - **NOTE1**: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
 
-- **NOTE2**:  you can enter the filename by absolute or relative path.
+- **NOTE2**: you can enter the filename by absolute or relative path.
 
 - **NOTE3**: if the filename contains space(s) then just type the filename with the space(s). Ex: urls GET
 
@@ -124,9 +124,9 @@ About the names and values of cookies and headers, $\large\color{cyan}{\textsf{a
 
 - **NOTE1**: the regex controls which characters are allowed, and not how you write them. So if you write 'Host' like this, it will be sent to $\large\color{cyan}{\textsf{autoKNOXSS}}$ like this.
 
-- **NOTE2**: Be careful with the Host header as it can crash some requests made by $\large\color{purple}{\textsf{KNOXSS}}$.
+- **NOTE2**: be careful with the Host header as it can crash some requests made by $\large\color{purple}{\textsf{KNOXSS}}$.
 
-- **NOTE3**: It's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
+- **NOTE3**: it's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
 
 - **NOTE4**: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
 
@@ -182,7 +182,7 @@ For example, if you decide not to include a file to store the results, the follo
 
 > tee: '': No such file or directory
 
-- **NOTE**: Logged errors will not be overwritten, but logged on the next line.
+- **NOTE**: logged errors will not be overwritten, but logged on the next line.
 
 ## Firewall and WAF
 

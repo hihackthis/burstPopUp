@@ -53,7 +53,7 @@ Very easy, doesn't need to install, just:
 ```
 1. clone this repo:
    - git clone https://github.com/hihackthis/autoKNOXSS
-2. $ cd autoKNOXSS/
+2. cd autoKNOXSS/
 3. chmod +x autoKNOXSS.sh
    - ./autoKNOXSS.sh
 ```

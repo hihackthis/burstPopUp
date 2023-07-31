@@ -20,6 +20,8 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 :small_blue_diamond: [How to use](#how-to-use)
 
+:small_blue_diamond: [Menu](#menu)
+
 :small_blue_diamond: [Cookies and headers names and values](#cookies-and-headers-names-and-values)
 
 :small_blue_diamond: [Flash Mode](#flash-mode)
@@ -111,6 +113,20 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 - **NOTE5**: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
 - **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :vulcan_salute:
+
+## Menu
+
+After entering your KNOXSS API key, a simple menu will appear for you (GET or POST), after that we have a complete menu:
+
+Let's say you choose the GET method (pretty much the two menus are the same).
+
+A) You will test one or more parameters of each URL;
+B) Same as option A, but you can add a custom cookie (mandatory);
+C) Same as option A, but you can add one (mandatory) or more custom headers (optional);
+D) Same as option A, plus options B and C;
+E) You will test all parameters of each URL using Flash Mode;
+F) You will test one or more parameters of each URL using AFB;
+G) You will test one or more parameters of each URL using AFB, plus option C.
 
 ## Cookies and headers names and values
 

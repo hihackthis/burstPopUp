@@ -1,0 +1,12 @@
+
+# autoKNOXSS start three months ago on Debian, editor gedit.
+
+### [june 2023]
+
+-> v2.0 
+
+- Every feature has become a function.
+
+### [july 2023]
+
+- Fix menu.

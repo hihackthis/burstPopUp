@@ -116,7 +116,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 ## Menu
 
-After entering your KNOXSS API key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
+After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
 
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/10.png)
 

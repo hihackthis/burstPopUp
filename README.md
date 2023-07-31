@@ -1,7 +1,5 @@
 # autoKNOXSS
 
-[![](https://visitcount.itsvg.in/api?id=autoknoxss&label=Counted%20you&color=4&icon=9&pretty=false)](https://visitcount.itsvg.in)
-
 <div align="center">
 
 ![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v1.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/made-brazil-red)

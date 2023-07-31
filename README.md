@@ -20,7 +20,7 @@ $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS
 
 :small_blue_diamond: [How to use](#how-to-use)
 
-:small_blue_diamond: [Menu](#menu)
+:small_blue_diamond: [Golden Menu](#golden-menu)
 
 :small_blue_diamond: [Cookies and headers names and values](#cookies-and-headers-names-and-values)
 
@@ -114,7 +114,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :vulcan_salute:
 
-## Menu
+## Golend Menu
 
 After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
 

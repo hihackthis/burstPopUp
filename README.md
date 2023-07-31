@@ -116,17 +116,17 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 ## Menu
 
-After entering your KNOXSS API key, a simple menu will appear for you (GET or POST), after that we have a complete menu:
+After entering your KNOXSS API key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
 
-Let's say you choose the GET method (pretty much the two menus are the same).
+![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/10.png)
 
-A) You will test one or more parameters of each URL;
-B) Same as option A, but you can add a custom cookie (mandatory);
-C) Same as option A, but you can add one (mandatory) or more custom headers (optional);
-D) Same as option A, plus options B and C;
-E) You will test all parameters of each URL using Flash Mode;
-F) You will test one or more parameters of each URL using AFB;
-G) You will test one or more parameters of each URL using AFB, plus option C.
+- A) You will test one or more parameters of each URL;
+- B) Same as option A, but you can add a custom cookie (mandatory);
+- C) Same as option A, but you can add one (mandatory) or more custom headers (optional);
+- D) Same as option A, plus options B and C;
+- E) You will test all parameters of each URL using Flash Mode;
+- F) You will test one or more parameters of each URL using AFB;
+- G) You will test one or more parameters of each URL using AFB, plus option C.
 
 ## Cookies and headers names and values
 

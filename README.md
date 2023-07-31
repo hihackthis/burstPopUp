@@ -114,7 +114,7 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :vulcan_salute:
 
-## Golend Menu
+## Golden Menu
 
 After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
 

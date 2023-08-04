@@ -121,11 +121,18 @@ After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu 
 ![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/10.png)
 
 - A) You will test one or more parameters of each URL;
+  
 - B) Same as option A, but you can add a custom cookie (mandatory);
+    - Keep in mind that the URLs must be from the same website :point_left:
+      
 - C) Same as option A, but you can add one (mandatory) or more custom headers (optional);
+  
 - D) Same as option A, plus options B and C;
+  
 - E) You will test all parameters of each URL using Flash Mode;
+  
 - F) You will test one or more parameters of each URL using AFB;
+  
 - G) You will test one or more parameters of each URL using AFB, plus option C.
 
 ## Cookies and headers names and values

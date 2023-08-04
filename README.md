@@ -123,7 +123,7 @@ After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu 
 - A) You will test one or more parameters of each URL;
   
 - B) Same as option A, but you can add a custom cookie (mandatory);
-    - Keep in mind that the URLs must be from the same website :point_left:
+    - Keep in mind that the URLs must be from the same website when logged in. :point_left:
       
 - C) Same as option A, but you can add one (mandatory) or more custom headers (optional);
   

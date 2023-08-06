@@ -8,7 +8,7 @@
 #                           by Rodolfo Assis (a.k.a @brutelogic)  :-)
 # Author        : Diego Moicano (a.k.a @hihackthis)               :-)
 # Email         : moicano.diego@gmail.com                         :-)
-# Date          : 24/06/2023                                      :-)
+# Date          : 22/06/2023                                      :-)
 # How to use:                                                     :-)
 #           $ chmod +x autoKNOXSS.sh                              :-)
 #           $ ./autoKNOXSS.sh                                     :-)
@@ -33,9 +33,23 @@ italic_light_blue="\e[3;94m"
 bg_red="\e[3;41m"
 endcolor="\e[0m"
 
+# Emojis
+
+glass_face="\xF0\x9F\x98\x8E"
+grimace_face="\xF0\x9F\x98\xAC"
+heart_face="\xF0\x9F\x98\x8D"
+sad_face="\xF0\x9F\x98\xA5"
+
+
 # Locale C
 
 LC_ALL=C
+
+# Counters
+
+t=0
+f=0
+e=0
 
 # Function Magic
 
@@ -72,6 +86,7 @@ fi
 # Function Output
 
 customOutput() {
+
 cond1="\"true\""
 cond2="\"none\""
 
@@ -84,19 +99,35 @@ then
     echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}"
     echo -e "${bold}>>>${endcolor} ${bold_green}XSS FOUND${endcolor}" 
     echo -e "${bold_purple}PoC${endcolor}: $poc\n"
+    ((t++))
 elif  [[ "$xss" != "$cond1" && "$error" = "$cond2" ]]
 then
     echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}\n"
     echo -e "${bold}>>>${endcolor} ${bold_red}XSS NOT FOUND${endcolor}\n"
+    ((f++))
 elif [[ -z "$error" ]]
 then
     echo -e "${bold_light_red}>>> Oh no, the firewall is blocking!\n${endcolor}"
+    ((e++))
 elif [[ "$xss" != "$cond1" && "$error" != "$cond2" ]]
 then
     echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}\n"
     echo -e "${bold_purple}ERROR${endcolor}: $error\n"
+    ((e++))
 fi
+r=$(($t+$f+$e))
 }
+
+# Function Stats
+
+stats() {
+printf "%33c Stats\n"
+printf "%30cSuccessfully: $t ${heart_face}\n"
+printf "%30cFailed: $f ${sad_face}\n"
+printf "%30cError/Block: $e ${grimace_face}\n"
+printf "%30cTotal: $r ${glass_face}\n"
+}
+
 
 # Function one or more Parameters GET
 
@@ -110,6 +141,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Cookie GET
@@ -408,20 +440,20 @@ while :
 do
 
 echo -e "${bold_light_yellow}
-+------------------------------------------------+
-A) One or more parameters                        |
-B) Add one custom cookie                         |
-C) Add one or more custom headers                |
-D) Add one cookie and one or more custom header  |
-E) Flash Mode                                    |
-    a) param=[XSS]                               |
-    b) param=value[XSS]                          |
-    c) /[XSS]?param=value                        |
-    d) header:[XSS]                              |
-F) Advanced Filter Bypass (AFB)                  |
-G) AFB and one or more custom header             |
-H) Return to main menu                           |
-+------------------------------------------------+
++---------------------------------------------------------+
+A) To test one or more parameters                         |
+B) To test with one custom cookie                         |
+C) To test with one or more custom headers                |
+D) To test with one cookie and one or more custom header  |
+E) Flash Mode Test                                        |
+    a) param=[XSS]                                        |
+    b) param=value[XSS]                                   |
+    c) /[XSS]?param=value                                 |
+    d) header:[XSS]                                       |
+F) Advanced Filter Bypass (AFB) test                      |
+G) To test with AFB and one or more custom header         |
+H) Return to main menu                                    |
++---------------------------------------------------------+
 ${endcolor}"
 echo -e "\n"
 read -p "Choose an option: " opt_2 < /dev/tty
@@ -695,18 +727,18 @@ while :
 do
 
 echo -e "${bold_light_yellow}
-+------------------------------------------------+
-A) One or more parameters                        |
-B) Add one custom cookie                         |
-C) Add one or more custom headers                |
-D) Add one cookie and one or more custom header  |
-E) Flash Mode                                    |
-    a) param=[XSS]                               |
-    b) param=value[XSS]                          |
-F) Advanced Filter Bypass (AFB)                  |
-G) AFB and one or more custom header             |
-H) Return to main menu                           |
-+------------------------------------------------+
++---------------------------------------------------------+
+A) To test one or more parameters                         |
+B) To test with one custom cookie                         |
+C) To test with one or more custom headers                |
+D) To test with one cookie and one or more custom header  |
+E) Flash Mode Test                                        |
+    a) param=[XSS]                                        |
+    b) param=value[XSS]                                   |
+F) Advanced Filter Bypass (AFB) test                      |
+G) To test with AFB and one or more custom header         |
+H) Return to main menu                                    |
++---------------------------------------------------------+
 ${endcolor}"
 read -p "Choose an option: " opt_4 < /dev/tty
 echo -e "\n"

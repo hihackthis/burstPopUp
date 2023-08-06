@@ -8,7 +8,6 @@
 #                           by Rodolfo Assis (a.k.a @brutelogic)  :-)
 # Author        : Diego Moicano (a.k.a @hihackthis)               :-)
 # Email         : moicano.diego@gmail.com                         :-)
-# Date          : 22/06/2023                                      :-)
 # How to use:                                                     :-)
 #           $ chmod +x autoKNOXSS.sh                              :-)
 #           $ ./autoKNOXSS.sh                                     :-)

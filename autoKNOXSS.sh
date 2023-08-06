@@ -39,7 +39,6 @@ grimace_face="\xF0\x9F\x98\xAC"
 heart_face="\xF0\x9F\x98\x8D"
 sad_face="\xF0\x9F\x98\xA5"
 
-
 # Locale C
 
 LC_ALL=C
@@ -156,6 +155,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Header GET
@@ -173,6 +173,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Cookie and Header GET
@@ -190,6 +191,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Flash Mode Value GET
@@ -207,6 +209,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Flash Mode Suffix GET
@@ -223,6 +226,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Flash Mode Prefix GET
@@ -239,6 +243,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Flash Mode and Header GET
@@ -255,6 +260,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err) 
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Advanced Filter Bypass GET
@@ -269,6 +275,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Advanced Filter Bypass and Header GET
@@ -286,6 +293,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < "$fget"
+stats
 }
 
 # Function Header Name
@@ -599,6 +607,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function Custom Cookie POST
@@ -615,6 +624,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Funciton Custom Header POST
@@ -632,6 +642,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function custom Cookie and Header POST
@@ -649,6 +660,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function Flash Mode Value POST
@@ -667,6 +679,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function Flash Mode Suffix Post
@@ -684,6 +697,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function Advanced Filter Bypass Post
@@ -699,6 +713,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Function Advanced Filter Bypass and Header POST
@@ -714,6 +729,7 @@ do
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
 done < <(paste -d '#' "$fpost" "$fdata")
+stats
 }
 
 # Funciton POST method

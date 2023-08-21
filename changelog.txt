@@ -1,16 +1,20 @@
-
 # The autoKNOXSS started three months ago on Debian, editor gedit.
+
+
+### [08-20-2023]
+
+-> Fix Colors Pallet
+
+### [08-06-2023]
+
+-> Add counters
+
+### [07-31-2023]
+
+-> Fix menu
 
 ### [06-2023]
 
 -> v2.0 
 
-- Every feature has become a function.
-
-### [07-31-2023]
-
-- Fix menu.
-
-### [08-06-2023]
-
-- Add counters
+-> Every feature has become a function.

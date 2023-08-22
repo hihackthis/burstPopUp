@@ -14,23 +14,23 @@
 # :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-)
 
 
-# Colors Pallet
+# Colors Pallet TPUT command
 
-blink_magic="\e[5;1;96m"
-blink_api_call="\e[5;1;95m"
-bold="\e[1m"
-white="\e[97m"
-bold_red="\e[1;91m"
-bold_green="\e[1;92m"
-bold_purple="\e[1;95m"
-bold_cyan="\e[1;96m"
-bold_yellow="\e[1;33m"
-bold_light_red="\e[1;31m"
-bold_light_gray="\e[1;37m"
-bold_light_yellow="\e[1;93m"
-italic_light_blue="\e[3;94m"
-bg_red="\e[3;41m"
-endcolor="\e[0m"
+blink_magic=$(tput setaf 6 blink)
+blink_api_call=$(tput setaf 5 blink )
+white=$(tput setaf 7)
+bold_white=$(tput setaf 7 bold)
+bold_red=$(tput setaf 1 bold)
+bold_green=$(tput setaf 2 bold)
+bold_purple=$(tput setaf 5 bold)
+bold_cyan=$(tput setaf 6 bold)
+bold_yellow=$(tput setaf 3 bold)
+warn_bold_red=$(tput setaf 196 bold)
+bold_light_gray=$(tput setaf 249 bold)
+bold_light_yellow=$(tput setaf 190 bold)
+italic_light_blue=$(tput setaf 10 sitm)
+bg_red=$(tput setab 124)
+endcolor=$(tput sgr0)
 
 # Emojis
 
@@ -72,9 +72,9 @@ else
     rest=$(("${reqs[1]}" - "${reqs[0]}"))
     printf "%10c${blink_api_call}*---------------------------------------\
 --------------*${endcolor}\n"
-    printf "%12c>>> ${bold}You made${endcolor} ${bold_green}${reqs[0]}${endcolor} \
-${bold}requests${endcolor}, ${bold_red}$rest${endcolor} \
-${bold}requests remain!${endcolor} <<<\n"
+    printf "%12c>>> ${bold_white}You made${endcolor} ${bold_green}${reqs[0]}${endcolor} \
+${bold_white}requests${endcolor}, ${bold_red}$rest${endcolor} \
+${bold_white}requests remain!${endcolor} <<<\n"
     printf "%10c${blink_api_call}*---------------------------------------\
 --------------*${endcolor}"
     echo
@@ -94,22 +94,22 @@ error=$(echo "$result" | jq '.[2]' 2> /dev/null)
 
 if [[ "$xss" = "$cond1" && "$error" = "$cond2" ]]
 then
-    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}"
-    echo -e "${bold}>>>${endcolor} ${bold_green}XSS FOUND${endcolor}" 
+    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold_white}$target${endcolor}"
+    echo -e "${bold_white}>>>${endcolor} ${bold_green}XSS FOUND${endcolor}" 
     echo -e "${bold_purple}PoC${endcolor}: $poc\n"
     ((t++))
 elif  [[ "$xss" != "$cond1" && "$error" = "$cond2" ]]
 then
-    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}\n"
-    echo -e "${bold}>>>${endcolor} ${bold_red}XSS NOT FOUND${endcolor}\n"
+    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold_white}$target${endcolor}\n"
+    echo -e "${bold_white}>>>${endcolor} ${bold_red}XSS NOT FOUND${endcolor}\n"
     ((f++))
 elif [[ -z "$error" ]]
 then
-    echo -e "${bold_light_red}>>> Oh no, the firewall is blocking!\n${endcolor}"
+    echo -e "${warn_light_red}>>> Oh no, the firewall is blocking!\n${endcolor}"
     ((e++))
 elif [[ "$xss" != "$cond1" && "$error" != "$cond2" ]]
 then
-    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold}$target${endcolor}\n"
+    echo -e "${bold_yellow}URL Probe:${endcolor} ${bold_white}$target${endcolor}\n"
     echo -e "${bold_purple}ERROR${endcolor}: $error\n"
     ((e++))
 fi
@@ -462,9 +462,9 @@ G) To test with AFB and one or more custom header         |
 H) Return to main menu                                    |
 +---------------------------------------------------------+
 ${endcolor}"
-echo -e "\n"
-read -p "Choose an option: " opt_2 < /dev/tty
 
+read -p "Choose an option: " opt_2 < /dev/tty
+echo -e "\n"
 case ${opt_2^^} in
 
 A)
@@ -755,6 +755,7 @@ G) To test with AFB and one or more custom header         |
 H) Return to main menu                                    |
 +---------------------------------------------------------+
 ${endcolor}"
+
 read -p "Choose an option: " opt_4 < /dev/tty
 echo -e "\n"
 case ${opt_4^^} in

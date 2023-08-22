@@ -43,10 +43,6 @@ sad_face="\xF0\x9F\x98\xA5"
 
 LC_ALL=C
 
-# Enable Extglob
-
-shopt -s extglob
-
 # Counters
 
 t=0
@@ -109,7 +105,7 @@ then
     ((f++))
 elif [[ -z "$error" ]]
 then
-    echo -e "${warn_light_red}>>> Oh no, the firewall is blocking!\n${endcolor}"
+    echo -e "${warn_bold_red}>>> Oh no, the firewall is blocking!\n${endcolor}"
     ((e++))
 elif [[ "$xss" != "$cond1" && "$error" != "$cond2" ]]
 then

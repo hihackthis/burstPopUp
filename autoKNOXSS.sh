@@ -43,6 +43,10 @@ sad_face="\xF0\x9F\x98\xA5"
 
 LC_ALL=C
 
+# Enable Extglob
+
+shopt -s extglob
+
 # Counters
 
 t=0
@@ -465,7 +469,7 @@ ${endcolor}"
 
 read -p "Choose an option: " opt_2 < /dev/tty
 echo -e "\n"
-case ${opt_2^^} in
+case "$opt_2" in
 
 A)
     clear
@@ -518,7 +522,7 @@ E) Flash Mode                    |
 ${endcolor}"
 
 read -p "Choose an option: " opt_3 < /dev/tty
-case ${opt_3,,} in
+case "$opt_3" in
 
 a)
     clear
@@ -585,7 +589,7 @@ H)
 ;;
 
 *)
-    echo -e "\nThe option ${bold_red}[$opt_2]${endcolor} do not exist!"
+    echo -e "The option ${bold_red}[$opt_2]${endcolor} do not exist!"
     sleep 3
     clear
 ;;
@@ -758,7 +762,7 @@ ${endcolor}"
 
 read -p "Choose an option: " opt_4 < /dev/tty
 echo -e "\n"
-case ${opt_4^^} in
+case "$opt_4" in
 
 A)
     clear
@@ -809,7 +813,7 @@ E) Flash Mode                    |
 ${endcolor}"
 
 read -p "Choose an option: " opt_5 < /dev/tty
-case ${opt_5,,} in
+case "$opt_5" in
 
 a)
     clear
@@ -831,7 +835,7 @@ c)
 ;;
 
 *)
-    echo -e "\nThe option ${bold_red}[$opt_6]${endcolor} do not exist!"
+    echo -e "\nThe option ${bold_red}[$opt_5]${endcolor} do not exist!"
     sleep 3
     clear
 ;;
@@ -861,7 +865,7 @@ H)
 ;;
 
 *)
-    echo -e "\nThe option ${bold_red}[$opt_5]${endcolor} do not exist!"
+    echo -e "The option ${bold_red}[$opt_4]${endcolor} do not exist!"
     sleep 3
     clear
 ;;
@@ -955,7 +959,7 @@ echo -e "${bold_light_yellow}
 ${endcolor}"
 
 read -p "Choose an option: " opt_1 < /dev/tty
-case $opt_1 in
+case "$opt_1" in
 
 1)
     echo -e "\n"
@@ -985,7 +989,7 @@ Smile because it happened!${endcolor}"
 ;;
 
 *)
-    echo -e "\nThe option ${bold_red}[$opt_1]${endcolor} do not exist!"
+    echo -e "The option ${bold_red}[$opt_1]${endcolor} do not exist!"
     sleep 3
     clear
 ;;

@@ -72,9 +72,9 @@ else
     rest=$(("${reqs[1]}" - "${reqs[0]}"))
     printf "%10c${blink_api_call}*---------------------------------------\
 --------------*${endcolor}\n"
-    printf "%12c>>> ${bold_white}You made${endcolor} ${bold_green}${reqs[0]}${endcolor} \
-${bold_white}requests${endcolor}, ${bold_red}$rest${endcolor} \
-${bold_white}requests remain!${endcolor} <<<\n"
+    printf "%12c>>> ${bold_white}You used${endcolor} ${bold_green}${reqs[0]}${endcolor} \
+${bold_white}times${endcolor} and ${bold_red}$rest${endcolor} \
+${bold_white}times remain!${endcolor} <<<\n"
     printf "%10c${blink_api_call}*---------------------------------------\
 --------------*${endcolor}"
     echo

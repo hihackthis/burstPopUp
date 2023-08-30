@@ -62,6 +62,10 @@ Very easy, doesn't need to install, just:
 
 **NOTE**: $\large\color{cyan}{\textsf{autoKNOXSS}}$ does use the **jq** tool. :warning:
 
+```
+# apt install jq
+```
+
 ## How to use
 
 $\large\color{cyan}{\textsf{autoKNOXSS}}$ is really simple to use:

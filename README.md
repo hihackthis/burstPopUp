@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v2.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/made-brazil-red)
+![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v3.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/made-brazil-red)
 
 
 --> $\large\color{cyan}{\textsf{burstPopUp}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper <--

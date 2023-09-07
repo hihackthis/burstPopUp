@@ -3,7 +3,7 @@
 
 # :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-)
 # Script        : burstPopUp.sh                                   :-)
-# Version       : 2.0                                             :-)
+# Version       : 3.0                                             :-)
 # Description   : This script use KNOXSS API                      :-) 
 #                           by Rodolfo Assis (a.k.a @brutelogic)  :-)
 # Author        : Diego Moicano (a.k.a @hihackthis)               :-)

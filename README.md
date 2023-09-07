@@ -1,20 +1,20 @@
-# autoKNOXSS
+# burstPopUp
 
 <div align="center">
 
 ![](https://img.shields.io/badge/build-passing-yellow) ![](https://img.shields.io/badge/bash-linux-brightgreen) ![](https://img.shields.io/badge/release-v2.0-blue) ![](https://img.shields.io/badge/hack-life-orange) ![](https://img.shields.io/badge/made-brazil-red)
 
 
---> $\large\color{cyan}{\textsf{autoKNOXSS}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper <--
+--> $\large\color{cyan}{\textsf{burstPopUp}}$ is a $\large\color{red}{\textsf{KNOXSS API}}$ wrapper <--
   
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/01.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/01.png)
 
 </div>
 
 ### Summary
 
 
-:small_blue_diamond: [About autoKNOXSS](#about-autoknoxss)
+:small_blue_diamond: [About burstPopUp](#about-autoknoxss)
 
 :small_blue_diamond: [How to install](#how-to-install)
 
@@ -34,9 +34,9 @@
 
 :small_blue_diamond: [Final words](#final-words)
 
-## About autoKNOXSS
+## About burstPopUp
 
-$\large\color{cyan}{\textsf{autoKNOXSS}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
+$\large\color{cyan}{\textsf{burstPopUp}}$ is a tool that uses a $\large\color{red}{\textsf{KNOXSS API}}$ and automates all tasks easily and quickly.
 
 Do you know $\large\color{purple}{\textsf{KNOXSS}}$?
 
@@ -54,13 +54,13 @@ Very easy, doesn't need to install, just:
 
 ```
 1. clone this repo:
-   - git clone https://github.com/hihackthis/autoKNOXSS
-2. cd autoKNOXSS/
-3. chmod +x autoKNOXSS.sh
-   - ./autoKNOXSS.sh
+   - git clone https://github.com/hihackthis/burstPopUp
+2. cd burstPopUp/
+3. chmod +x burstPopUp.sh
+   - ./burstPopUp.sh
 ```
 
-**NOTE**: $\large\color{cyan}{\textsf{autoKNOXSS}}$ does use the **jq** tool. :warning:
+**NOTE**: $\large\color{cyan}{\textsf{burstPopUp}}$ does use the **jq** tool. :warning:
 
 ```
 # apt install jq
@@ -68,7 +68,7 @@ Very easy, doesn't need to install, just:
 
 ## How to use
 
-$\large\color{cyan}{\textsf{autoKNOXSS}}$ is really simple to use:
+$\large\color{cyan}{\textsf{burstPopUp}}$ is really simple to use:
 
 1. Enter your $\large\color{red}{\textsf{KNOXSS API}}$
 2. Choose a request method (GET or POST)
@@ -86,7 +86,7 @@ BLANK
 ```
 Look this:
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/05.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/05.png)
 
 If you choose the POST method then you must provide two filenames:
 
@@ -104,9 +104,9 @@ BLANK                             BLANK
 
 Pay attention: these two filenames are, let's say, complementary, one completes the other, of course. In other words, the first URL in **A** has its data corresponding to the first line in **B**; the second URL of **A** has its corresponding data on the second line in **B**, and so on. Just like this:
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/04.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/04.png)
 
-- **NOTE1**: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{autoKNOXSS}}$.
+- **NOTE1**: always leave the last line blank in the file, otherwise the last or unique URL not will be loaded by $\large\color{cyan}{\textsf{burstPopUp}}$.
 
 - **NOTE2**: you can enter the filename by absolute or relative path.
 
@@ -116,13 +116,13 @@ Pay attention: these two filenames are, let's say, complementary, one completes 
 
 - **NOTE5**: don't use the backslash [ \ ] as an espace separator, or quotes [ " or ' ].
 
-- **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :vulcan_salute:
+- **NOTE6**: the parameter separator, ampersand [ & ], it's not necessary to encode [ %26 ], as the $\large\color{cyan}{\textsf{burstPopUp}}$ does that for you. :vulcan_salute:
 
 ## Golden Menu
 
 After entering your $\large\color{red}{\textsf{KNOXSS API}}$ key, a simple menu will appear for you (GET or POST), after that, we have a complete menu. Let's say you choose the GET method (pretty much the two menus are the same):
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/10.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/10.png)
 
 - A) You will test one or more parameters of each URL;
   
@@ -147,19 +147,19 @@ You don't need to escape any special character contained in cookie and header na
 
 In this case, does not necessarily escape the forward slash [ / ] and the parentheses [ ( ) ].
 
-About the names and values of cookies and headers, $\large\color{cyan}{\textsf{autoKNOXSS}}$ follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
+About the names and values of cookies and headers, $\large\color{cyan}{\textsf{burstPopUp}}$ follows the standard of RFC 6265 and RFC 9110, that is, if any disallowed character is part of a cookie or header, then it will be blocked through a stubborn regex. :muscle:
 
-- **NOTE1**: the regex controls which characters are allowed, and not how you write them. So if you write 'Host' like this, it will be sent to $\large\color{cyan}{\textsf{autoKNOXSS}}$ like this.
+- **NOTE1**: the regex controls which characters are allowed, and not how you write them. So if you write 'Host' like this, it will be sent to $\large\color{cyan}{\textsf{burstPopUp}}$ like this.
 
 - **NOTE2**: be careful with the Host header as it can crash some requests made by $\large\color{purple}{\textsf{KNOXSS}}$.
 
 - **NOTE3**: it's good to know that the ***User-Agent*** arriving at the client is the one being sent by $\large\color{purple}{\textsf{KNOXSS}}$, that means that if you add a ***User-Agent*** then two ***User-Agents*** will arrive at the client, the one from $\large\color{purple}{\textsf{KNOXSS}}$ and yours.
 
-- **NOTE4**: the $\large\color{cyan}{\textsf{autoKNOXSS}}$ accepts one cookie and one or more headers.
+- **NOTE4**: the $\large\color{cyan}{\textsf{burstPopUp}}$ accepts one cookie and one or more headers.
 
 ## Flash Mode
 
-$\large\color{cyan}{\textsf{autoKNOXSS}}$ does all the tests allowed in this mode, and all of them, in an automated way.
+$\large\color{cyan}{\textsf{burstPopUp}}$ does all the tests allowed in this mode, and all of them, in an automated way.
 
 ```
 a) param=value[XSS]
@@ -168,7 +168,7 @@ c) /[XSS]?param=value
 d) header:[XSS]
 ```
 
-- **NOTE1**: all parameters will be tested with **[XSS]**, it is still not possible to choose which parameter will receive **[XSS]**, at least in this version of $\large\color{cyan}{\textsf{autoKNOXSS}}$.
+- **NOTE1**: all parameters will be tested with **[XSS]**, it is still not possible to choose which parameter will receive **[XSS]**, at least in this version of $\large\color{cyan}{\textsf{burstPopUp}}$.
 
 Ex:
 ```
@@ -177,29 +177,29 @@ p1=[XSS]&p2=[XSS]
 p1=[XSS]&p2=[XSS]&p2=[XSS]
 ```
 
-- **NOTE2**: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{autoKNOXSS}}$ does that for you. :heart_eyes:
+- **NOTE2**: you don't need to add the **[XSS]**, because the $\large\color{cyan}{\textsf{burstPopUp}}$ does that for you. :heart_eyes:
 
 ## Advanced Filter Bypass
 
-$\large\color{cyan}{\textsf{autoKNOXSS}}$ does all tests allowed in this mode in an automated way.
+$\large\color{cyan}{\textsf{burstPopUp}}$ does all tests allowed in this mode in an automated way.
 
 ## Output and Logs
 
-After you add the filename containing the URLs, $\large\color{cyan}{\textsf{autoKNOXSS}}$ will ask if you want to add a file to save the output, that is, a result in addition to the one shown on the screen. Close attention now, we have to notice a big difference between one (screen output) and the other (file output).
+After you add the filename containing the URLs, $\large\color{cyan}{\textsf{burstPopUp}}$ will ask if you want to add a file to save the output, that is, a result in addition to the one shown on the screen. Close attention now, we have to notice a big difference between one (screen output) and the other (file output).
 
-The screen output is fully customized by $\large\color{cyan}{\textsf{autoKNOXSS}}$ as its main objective is to show in a few lines the result(s) obtained.
+The screen output is fully customized by $\large\color{cyan}{\textsf{burstPopUp}}$ as its main objective is to show in a few lines the result(s) obtained.
 
 The file output is more verbose, it is the traditional output of the $\large\color{red}{\textsf{KNOXSS API}}$, so in this file, you will have more details of the results, so that you can later do your own debugging and select contents using, for example, the grep command.
 
 ***Screen Output***
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/02.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/02.png)
 
 ***File Output***
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/03.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/03.png)
 
-Another thing, whenever $\large\color{cyan}{\textsf{autoKNOXSS}}$ is run it will create two files: curl.err and jq.err.
+Another thing, whenever $\large\color{cyan}{\textsf{burstPopUp}}$ is run it will create two files: curl.err and jq.err.
 
 :ballot_box_with_check: curl.err: this will log all errors in the $\large\color{red}{\textsf{KNOXSS API}}$ curl command
 
@@ -213,13 +213,13 @@ For example, if you decide not to include a file to store the results, the follo
 
 ## Firewall and WAF
 
-Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{autoKNOXSS}}$ shows the following output:
+Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this crashes the JSON output, and the URL source code will be shown on the screen, and in this case, $\large\color{cyan}{\textsf{burstPopUp}}$ shows the following output:
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/09.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/09.png)
 
 Now, if you see the output in the file (if you added it) will be:
 
-![](https://github.com/hihackthis/autoKNOXSS/blob/main/images/08.png)
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/08.png)
 
 ## Final words 
 
@@ -227,9 +227,9 @@ Have fun! :money_mouth_face:
 
 <div align="center">
 
-[!["Buy Me A Cake"](https://github.com/hihackthis/autoKNOXSS/blob/main/images/06.png)](https://bmc.link/moicanodieQ) 
+[!["Buy Me A Cake"](https://github.com/hihackthis/burstPopUp/blob/main/images/06.png)](https://bmc.link/moicanodieQ) 
 
-[!["Paypal"](https://github.com/hihackthis/autoKNOXSS/blob/main/images/07.png)](https://www.paypal.com/donate/?hosted_button_id=UC7N8XFXNQCPA)
+[!["Paypal"](https://github.com/hihackthis/burstPopUp/blob/main/images/07.png)](https://www.paypal.com/donate/?hosted_button_id=UC7N8XFXNQCPA)
 
 </div>
 

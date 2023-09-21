@@ -1,5 +1,9 @@
 # The autoKNOXSS started three months ago on Debian, editor gedit.
 
+### [10-21-2023]
+
+--> Add new regex value Flash Mode (GET and POST)
+
 ### [09-07-2023]
 
 -> Rename tool

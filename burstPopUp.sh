@@ -200,7 +200,7 @@ flashValueGet() {
 while IFS= read -r line
 do
 # Regex replaces parameter values with [XSS]
-    line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. ]+&|[A-Za-z0-9!@#$%*. ]+&?$)/[XSS]\&/g' \
+    line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. _-]+&|[A-Za-z0-9!@#$%*. _-]+&?$)/[XSS]\&/g' \
 -e 's/&$//' <<< "$line")
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line"
@@ -669,7 +669,7 @@ flashValuePost() {
 while IFS= read -r line
 do
 # Regex replaces parameter values with [XSS]
-    line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. ]+&|[A-Za-z0-9!@#$%*. ]+&?$)/[XSS]\&/g' \
+    line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. _-]+&|[A-Za-z0-9!@#$%*. _-]+&?$)/[XSS]\&/g' \
 -e 's/&$//' <<< "$line")
     line=$(sed -E -e 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")

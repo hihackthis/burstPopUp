@@ -201,7 +201,7 @@ while IFS= read -r line
 do
 # Regex replaces parameter values with [XSS]
     line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. _-]+&|[A-Za-z0-9!@#$%*. _-]+&?$)/[XSS]\&/g' \
--e 's/&$//' <<< "$line")
+-e 's/[A-Za-z0-9+/]+[=]{1,2}$/[XSS]/' -e 's/&$//' <<< "$line")
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line"
     result=$(curl -X POST https://knoxss.me/api/v3 \
@@ -670,7 +670,7 @@ while IFS= read -r line
 do
 # Regex replaces parameter values with [XSS]
     line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. _-]+&|[A-Za-z0-9!@#$%*. _-]+&?$)/[XSS]\&/g' \
--e 's/&$//' <<< "$line")
+-e 's/[A-Za-z0-9+/]+[=]{1,2}$/[XSS]/' -e 's/&$//' <<< "$line")
     line=$(sed -E -e 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"

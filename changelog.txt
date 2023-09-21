@@ -2,7 +2,9 @@
 
 ### [10-21-2023]
 
---> Add new regex value Flash Mode (GET and POST)
+-> Add regex base64 value Flash Mode (GET and POST)
+
+-> Add new regex value Flash Mode (GET and POST)
 
 ### [09-07-2023]
 

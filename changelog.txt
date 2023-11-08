@@ -1,5 +1,9 @@
 # The autoKNOXSS started three months ago on Debian, editor gedit.
 
+### [08-10-2023]
+
+--> Add User-Agent tool to cURL request
+
 ### [10-21-2023]
 
 -> Add regex base64 value Flash Mode (GET and POST)

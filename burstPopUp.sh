@@ -134,7 +134,7 @@ while IFS= read -r line
 do
     target="$line"
     line=$(sed 's/&/%26/g' <<< "$line")
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -149,7 +149,7 @@ while IFS= read -r line
 do
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line&auth=Cookie:$cookie_name=$cookie_value"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&auth=Cookie:$cookie_name=$cookie_value" \
 -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
@@ -168,7 +168,7 @@ do
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
     line=$(sed 's/%0D%0A$//' <<< $line)
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -186,7 +186,7 @@ do
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
     line=$(sed 's/%0D%0A$//' <<< $line)
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -204,7 +204,7 @@ do
 -e 's/[A-Za-z0-9+/]+[=]{1,2}$/[XSS]/' -e 's/&$//' <<< "$line")
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -221,7 +221,7 @@ do
     line=$(sed -E -e 's/(&|&?$)/[XSS]\&/g' -e 's/&$//' <<< "$line")
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -238,7 +238,7 @@ do
     line=$(sed -E 's/[A-Za-z0-9!@#$%*.]+\?/[XSS]\?/' <<< "$line")
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -254,7 +254,7 @@ do
     flash_value="[XSS]"
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line&auth=$header_name: $flash_value"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&auth=$header_name: $flash_value" \
 -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err) 
@@ -270,7 +270,7 @@ while IFS= read -r line
 do
     line=$(sed 's/&/%26/g' <<< "$line")
     target="$line&afb=1"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -288,7 +288,7 @@ do
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
     line=$(sed 's/%0D%0A$//' <<< $line)
     target="$line&afb=1"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -602,7 +602,7 @@ do
     line=$(sed 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -618,7 +618,7 @@ do
     line=$(sed 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line&auth=Cookie:$cookie_name=$cookie_value"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&auth=Cookie:$cookie_name=$cookie_value" \
 -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
@@ -637,7 +637,7 @@ do
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
     line=$(sed 's/%0D%0A$//' <<< $line)
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -655,7 +655,7 @@ do
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
     line=$(sed 's/%0D%0A$//' <<< $line)
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -674,7 +674,7 @@ do
     line=$(sed -E -e 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -692,7 +692,7 @@ do
     line=$(sed 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -708,7 +708,7 @@ do
     line=$(sed 's/&/%26/g' <<< "$line")
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line&afb=1"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput
@@ -724,7 +724,7 @@ do
     line=$(sed 's/&/%26/g' <<< "$line")
     line=$(sed "s/#/\&auth=$header\&post=/" <<< "$line")
     target="$line&afb=1"
-    result=$(curl -X POST https://knoxss.me/api/v3 \
+    result=$(curl -X POST https://knoxss.me/api/v3 -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
     customOutput

@@ -3,7 +3,7 @@
 
 # :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-) :-)
 # Script        : burstPopUp.sh                                   :-)
-# Version       : 3.0                                             :-)
+# Version       : 4.0                                             :-)
 # Description   : This script use KNOXSS API                      :-) 
 #                           by Rodolfo Assis (a.k.a @brutelogic)  :-)
 # Author        : Diego Moicano (a.k.a @hihackthis)               :-)
@@ -34,6 +34,7 @@ endcolor=$(tput sgr0)
 
 # Emojis
 
+graph_stats="\xF0\x9F\x93\x88"
 glass_face="\xF0\x9F\x98\x8E"
 grimace_face="\xF0\x9F\x98\xAC"
 heart_face="\xF0\x9F\x98\x8D"
@@ -63,7 +64,7 @@ ${endcolor}"
 
 api_call() {
 call=$(echo "$result" | jq -r '.[3]' 2> /dev/null | tr '/' ' ')
-read -a reqs <<< "$call"
+read -r -a reqs <<< "$call"
 
 if [[ -z "${reqs[0]}" || -z "${reqs[1]}" ]]
 then
@@ -113,13 +114,13 @@ then
     echo -e "${bold_purple}ERROR${endcolor}: $error\n"
     ((e++))
 fi
-r=$(($t+$f+$e))
+r=$((t+f+e))
 }
 
 # Function Stats
 
 stats() {
-printf "%33c Stats\n"
+printf "%33c Stats ${graph_stats} \n"
 printf "%30cSuccessfully: $t ${heart_face}\n"
 printf "%30cFailed: $f ${sad_face}\n"
 printf "%30cError/Block: $e ${grimace_face}\n"
@@ -133,7 +134,7 @@ paramGET() {
 while IFS= read -r line
 do
     target="$line"
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
 | tee -a "$fresults" 2>> curl.err | jq '[.XSS, .PoC, .Error, ."API Call"]' 2>> jq.err)
@@ -147,7 +148,7 @@ stats
 cookieGet() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line&auth=Cookie:$cookie_name=$cookie_value"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&auth=Cookie:$cookie_name=$cookie_value" \
@@ -163,10 +164,10 @@ stats
 headersGet() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line="$line&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line=$(sed 's/%0D%0A$//' <<< $line)
+    line="${line//%0D%0A$//}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -181,10 +182,10 @@ stats
 cookHeadGet() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line="$line&auth=Cookie:$cookie&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line=$(sed 's/%0D%0A$//' <<< $line)
+    line="${line//%0D%0A$//}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -202,7 +203,7 @@ do
 # Regex replaces parameter values with [XSS]
     line=$(sed -E -e 's/([A-Za-z0-9!@#$%*. _-]+&|[A-Za-z0-9!@#$%*. _-]+&?$)/[XSS]\&/g' \
 -e 's/[A-Za-z0-9+/]+[=]{1,2}$/[XSS]/' -e 's/&$//' <<< "$line")
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -219,7 +220,7 @@ while IFS= read -r line
 do
 # Regex to add [XSS] at the end of the parameter values
     line=$(sed -E -e 's/(&|&?$)/[XSS]\&/g' -e 's/&$//' <<< "$line")
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -236,7 +237,7 @@ while IFS= read -r line
 do
 # Regex to add [XSS] after the question mark
     line=$(sed -E 's/[A-Za-z0-9!@#$%*.]+\?/[XSS]\?/' <<< "$line")
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -252,7 +253,7 @@ flashHeaderGet() {
 while IFS= read -r line
 do
     flash_value="[XSS]"
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line&auth=$header_name: $flash_value"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&auth=$header_name: $flash_value" \
@@ -268,7 +269,7 @@ stats
 afbGet() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     target="$line&afb=1"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
@@ -283,10 +284,10 @@ stats
 afbHeaderGet() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line="$line&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line=$(sed 's/%0D%0A$//' <<< $line)
+    line="${line//%0D%0A$//}"
     target="$line&afb=1"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
@@ -301,7 +302,7 @@ stats
 headerName() {
 while :
 do    
-    read -p "Enter only header name (ex: User-Agent): " header_name < /dev/tty
+    read -r -p "Enter only header name (ex: User-Agent): " header_name < /dev/tty
     clear
     
 # Regex in keeping with RFC 9110 (https://www.ietf.org/rfc/rfc9110.txt)
@@ -310,7 +311,7 @@ do
 if [[ "$header_name" =~ $ER ]]
 then
     break
-elif [[ -z $header_name ]]
+elif [[ -z "$header_name" ]]
 then
     echo "The header name can not be empty!"
     sleep 2
@@ -331,8 +332,8 @@ toastCookies() {
 clear
 while :
 do
-    read -p "Enter only cookie name (ex: PHPSESSID): " cookie_name < /dev/tty
-    read -p "Enter only cookie value (ex: 298zf09hf01): " cookie_value < /dev/tty
+    read -r -p "Enter only cookie name (ex: PHPSESSID): " cookie_name < /dev/tty
+    read -r -p "Enter only cookie value (ex: 298zf09hf01): " cookie_value < /dev/tty
     clear
     
 # Regex in keeping with RFC 6265 (https://www.ietf.org/rfc/rfc6265.txt)
@@ -363,8 +364,8 @@ done
 brainHeaders() {
 while :
 do    
-    read -p "Enter only header name (ex: Referer): " header_name < /dev/tty
-    read -p "Enter only header value (ex: some URL): " header_value < /dev/tty
+    read -r -p "Enter only header name (ex: Referer): " header_name < /dev/tty
+    read -r -p "Enter only header value (ex: some URL): " header_value < /dev/tty
     echo
     
 # Regex in keeping with RFC 9110 (https://www.ietf.org/rfc/rfc9110.txt)
@@ -406,30 +407,33 @@ press ENTER/SPACE key..." stop < /dev/tty ; echo
 
 if [[ "$stop" != "" ]]
 then
-    read -p "Enter only header name (ex: Referer): " header_name < /dev/tty
-    read -p "Enter only header value (ex: some URL): " header_value < /dev/tty
+    read -r -p "Enter only header name (ex: Referer): " header_name < /dev/tty
+    read -r -p "Enter only header value (ex: some URL): " header_value < /dev/tty
     clear
-if [[ $header_name =~ $ER1 && $header_value =~ $ER2 ]]
-then
-    new_header="$header_name: $header_value"
-elif [[ -z $header_name || -z $header_value ]]
-then
-    echo "The header name or value can not be empty!"
-    sleep 2
-    clear
-    continue
-else
-echo "Please, check if header name or value is correct."
-    sleep 2
-    clear
-    continue
-fi
+    
+# Regex in keeping with RFC 9110 (https://www.ietf.org/rfc/rfc9110.txt)
+    ER3='^[A-Za-z0-9_-]+$'
+    ER4='^[]A-Za-z0-9 "#$%&=@*+`~^!(){}?\/<>:.,;'\''[_-]+$'
+    
+        if [[ "$header_name" =~ $ER3 && "$header_value" =~ $ER4 ]]
+	then
+    		new_header="$header_name: $header_value"
+	elif [[ -z "$header_name" || -z "$header_value" ]]
+	then
+    		echo "The header name or value can not be empty!"
+    		sleep 2
+    		clear
+    		continue
+	else
+		echo "Please, check if header name or value is correct."
+    		sleep 2
+    		clear
+    		continue
+	fi
     header+="%0D%0A$new_header"
     ((i++))
     continue
 else
-# Regex to escape the backslash and the forward slash inside the header
-    header=$(sed -e 's|\\|\\\\|g' -e 's|/|\\/|g' <<< "$header")
     break
 fi
 done
@@ -463,7 +467,7 @@ H) Return to main menu                                    |
 +---------------------------------------------------------+
 ${endcolor}"
 
-read -p "Choose an option: " opt_2 < /dev/tty
+read -r -p "Choose an option: " opt_2 < /dev/tty
 echo -e "\n"
 case "$opt_2" in
 
@@ -517,7 +521,7 @@ E) Flash Mode                    |
 +--------------------------------+
 ${endcolor}"
 
-read -p "Choose an option: " opt_3 < /dev/tty
+read -r -p "Choose an option: " opt_3 < /dev/tty
 case "$opt_3" in
 
 a)
@@ -599,7 +603,7 @@ done
 paramPOST() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
@@ -615,7 +619,7 @@ stats
 cookiePost() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line&auth=Cookie:$cookie_name=$cookie_value"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
@@ -632,10 +636,10 @@ stats
 headersPost() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
-    line=$(sed "s/#/\&auth=$header\&post=/" <<< "$line")
+    line="${line//&/%26}"
+    line="${line//#/\&auth=$header\&post=}"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line=$(sed 's/%0D%0A$//' <<< $line)
+    line="${line//%0D%0A$//}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -650,10 +654,10 @@ stats
 cookHeadPost() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
-    line=$(sed "s/#/\&auth=Cookie:$cookie\&auth=$header\&post=/" <<< "$line")
+    line="${line//&/%26}"
+    line="${line//#/\&auth=Cookie:$cookie\&auth=$header\&post=}"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line=$(sed 's/%0D%0A$//' <<< $line)
+    line="${line//%0D%0A$//}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -689,7 +693,7 @@ while IFS= read -r line
 do
 # Regex to add [XSS] at the end of the parameter values
     line=$(sed -E -e 's/(&|&?$)/[XSS]\&/g' -e 's/&$//' <<< "$line")
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
@@ -705,7 +709,7 @@ stats
 afbPost() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
+    line="${line//&/%26}"
     line=$(sed -e 's/#/\&post=/g' -e 's/&post=$//' <<< "$line")
     target="$line&afb=1"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
@@ -721,8 +725,8 @@ stats
 afbHeaderPost() {
 while IFS= read -r line
 do
-    line=$(sed 's/&/%26/g' <<< "$line")
-    line=$(sed "s/#/\&auth=$header\&post=/" <<< "$line")
+    line="${line//&/%26}"
+    line="${line//#/\&auth=$header\&post=}"
     target="$line&afb=1"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
@@ -756,7 +760,7 @@ H) Return to main menu                                    |
 +---------------------------------------------------------+
 ${endcolor}"
 
-read -p "Choose an option: " opt_4 < /dev/tty
+read -r -p "Choose an option: " opt_4 < /dev/tty
 echo -e "\n"
 case "$opt_4" in
 
@@ -808,7 +812,7 @@ E) Flash Mode                    |
 +--------------------------------+
 ${endcolor}"
 
-read -p "Choose an option: " opt_5 < /dev/tty
+read -r -p "Choose an option: " opt_5 < /dev/tty
 case "$opt_5" in
 
 a)
@@ -875,15 +879,15 @@ done
 fileGET() {
 while :
 do
-read -p "Enter a filename path with URLs GET (only): " fget < /dev/tty
-if [[ ! -a "$fget" && ! -r "$fget" && ! -f "$fget" ]]
-then
-	echo -e "\n${bold_purple}File${endcolor} ${white}[$fget]${endcolor} \
+    read -r -p "Enter a filename path with URLs GET (only): " fget < /dev/tty
+    if [[ ! -a "$fget" && ! -r "$fget" && ! -f "$fget" ]]
+    then
+        echo -e "\n${bold_purple}File${endcolor} ${white}[$fget]${endcolor} \
 ${bold_purple}doesn't exist or you don't have read access!${endcolor}\n"
-    continue
-else
-    break
-fi
+        continue
+    else
+        break
+    fi
 done
 }
 
@@ -892,15 +896,15 @@ done
 filePOST() {
 while :
 do
-read -p "Enter a filename path with URLs POST (only): " fpost < /dev/tty
-if [[ ! -a "$fpost" && ! -r "$fpost" && ! -f "$fpost" ]]
-then
-	echo -e "\n${bold_purple}File${endcolor} ${white}[$fpost]${endcolor} \
+    read -r -p "Enter a filename path with URLs POST (only): " fpost < /dev/tty
+    if [[ ! -a "$fpost" && ! -r "$fpost" && ! -f "$fpost" ]]
+    then
+        echo -e "\n${bold_purple}File${endcolor} ${white}[$fpost]${endcolor} \
 ${bold_purple}doesn't exist or you don't have read access!${endcolor}\n"
-    continue
-else
-    break
-fi
+        continue
+    else
+        break
+    fi
 done
 }
 
@@ -909,14 +913,14 @@ done
 dataPOST() {
 while :
 do
-read -p "Enter a filename path with POST data (only): " fdata < /dev/tty
-if [[ ! -a "$fdata" && ! -r "$fdata" && ! -f "$fdata" ]]
-then
-	echo -e "\n${bold_purple}File${endcolor} ${white}[$fdata]${endcolor} \
+    read -r -p "Enter a filename path with POST data (only): " fdata < /dev/tty
+    if [[ ! -a "$fdata" && ! -r "$fdata" && ! -f "$fdata" ]]
+    then
+        echo -e "\n${bold_purple}File${endcolor} ${white}[$fdata]${endcolor} \
 ${bold_purple}doesn't exist or you don't have read access!${endcolor}\n"
-    continue
-else
-    break
+        continue
+    else
+        break
 fi
 done
 }
@@ -926,15 +930,15 @@ done
 fileResult() {
 while :
 do
-read -p "Enter a filename path to save results, if no, \
+    read -r -p "Enter a filename path to save results, if no, \
 just press ENTER key: " fresults < /dev/tty
-if [[ ! -a "$fresults" && ! -w "$fresults" && ! -f "$fresults" && "$fresults" != "" ]]
-then
-    echo -e "\n${bold_purple}File${endcolor} ${white}[$fresults]${endcolor} \
+    if [[ ! -a "$fresults" && ! -w "$fresults" && ! -f "$fresults" && "$fresults" != "" ]]
+    then
+        echo -e "\n${bold_purple}File${endcolor} ${white}[$fresults]${endcolor} \
 ${bold_purple}doesn't exist or you don't have write access!${endcolor}\n"
-continue
-else
-    break
+    continue
+    else
+        break
 fi
 done
 }
@@ -954,7 +958,7 @@ echo -e "${bold_light_yellow}
 +---------------------+
 ${endcolor}"
 
-read -p "Choose an option: " opt_1 < /dev/tty
+read -r -p "Choose an option: " opt_1 < /dev/tty
 case "$opt_1" in
 
 1)
@@ -1022,22 +1026,21 @@ name
 
 while :
 do
-    read -p "Enter a KNOXSS API: " knoxss_api < /dev/tty
+    read -r -p "Enter a KNOXSS API: " knoxss_api < /dev/tty
     clear
     
     # Regex in keeping with KNOXSS API standard    
     ER='[^A-Za-z0-9-]+'
     
-    [[ "$knoxss_api" =~ $ER ]] && echo -e "\nEnter a correct \
-${bg_red}KNOXSS API${endcolor}\n" ||
-    
-    if [[ -z "$knoxss_api" || "${#knoxss_api}" -ne 36 ]]
+    if [[ "$knoxss_api" =~ $ER ]]
+    then
+        echo -e "\nEnter a correct ${bg_red}KNOXSS API${endcolor}\n"
+    elif [[ -z "$knoxss_api" || "${#knoxss_api}" -ne 36 ]]
     then
         echo -e "\nOops ${bg_red}KNOXSS API${endcolor} unknown\n"
     else
-
         mainMenu
-fi
+    fi
 done
 
 # End of script

@@ -1,43 +1,61 @@
-# The autoKNOXSS started three months ago on Debian, editor gedit.
+# The burstPopUp makes on Debian, editor gedit.
+
+### [07-04-2024]
+
+--> Up version to 4.0
+
+--> New indentation
+
+--> Added a description of the counter
+
+--> Backslash scape removed from moreHeaders function
+
+--> Added and fixed moreHeaders function regex
+
+--> Added emoji stats panel
+
+--> Fixed some bugs codes
 
 ### [01-12-2023]
 
---> Fix API KNOXSS Address
+--> Fixed API KNOXSS Addedress
 
 ### [08-10-2023]
 
---> Add User-Agent tool to cURL request
+--> Added User-Agent tool to cURL request
 
 ### [10-21-2023]
 
--> Add regex base64 value Flash Mode (GET and POST)
+--> Added regex base64 value Flash Mode (GET and POST)
 
--> Add new regex value Flash Mode (GET and POST)
+--> Added new regex value Flash Mode (GET and POST)
 
 ### [09-07-2023]
 
--> Rename tool
+--> Up version to 3.0
+
+--> Rename tool
 
 ### [08-22-2023]
 
--> Change Colors Pallet - TPUT command
+--> Change Colors Pallet - TPUT command
 
--> Removed circumflex accent from case options 
+--> Removed circumflex accent from case options 
 
 ### [08-20-2023]
 
--> Fix Colors Pallet
+--> Fixed Colors Pallet
 
 ### [08-06-2023]
 
--> Add counters
+--> Added counters
 
 ### [07-31-2023]
 
--> Fix menu
+--> Fixed menu
 
 ### [06-2023]
 
--> v2.0 
+--> Release v2.0 
 
--> Every feature has become a function.
+--> Every feature has become a function

@@ -32,6 +32,8 @@
 
 :small_blue_diamond: [Firewall and WAF](#firewall-and-waf)
 
+:small_blue_diamond: [Counter](#counter)
+
 :small_blue_diamond: [Final words](#final-words)
 
 ## About burstPopUp
@@ -220,6 +222,18 @@ Some firewalls block the $\large\color{red}{\textsf{KNOXSS API}}$, and this cras
 Now, if you see the output in the file (if you added it) will be:
 
 ![](https://github.com/hihackthis/burstPopUp/blob/main/images/08.png)
+
+## Counter
+
+The counter will sum up all the results of that session, that is, from the moment the $\large\color{cyan}{\textsf{burstPopUp}}$  started. To reset the counter, you must close the program and start a new session.
+
+First run:
+
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/11.png)
+
+Second run, same session:
+
+![](https://github.com/hihackthis/burstPopUp/blob/main/images/12.png)
 
 ## Final words 
 

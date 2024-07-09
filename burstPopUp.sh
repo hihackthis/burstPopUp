@@ -167,7 +167,7 @@ do
     line="${line//&/%26}"
     line="$line&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line="${line//%0D%0A$//}"
+    line="${line//%0D%0A$/}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -185,7 +185,7 @@ do
     line="${line//&/%26}"
     line="$line&auth=Cookie:$cookie&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line="${line//%0D%0A$//}"
+    line="${line//%0D%0A$/}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -287,7 +287,7 @@ do
     line="${line//&/%26}"
     line="$line&auth=$header"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line="${line//%0D%0A$//}"
+    line="${line//%0D%0A$/}"
     target="$line&afb=1"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line&afb=1" -H "X-API-KEY: $knoxss_api" -s \
@@ -639,7 +639,7 @@ do
     line="${line//&/%26}"
     line="${line//#/\&auth=$header\&post=}"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line="${line//%0D%0A$//}"
+    line="${line//%0D%0A$/}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
@@ -657,7 +657,7 @@ do
     line="${line//&/%26}"
     line="${line//#/\&auth=Cookie:$cookie\&auth=$header\&post=}"
 # Regex to remove the carriage return and the linefeed at the end of the last parameter
-    line="${line//%0D%0A$//}"
+    line="${line//%0D%0A$/}"
     target="$line"
     result=$(curl -X POST https://api.knoxss.pro -A "burstPopUp tool" \
 -d "target=$line" -H "X-API-KEY: $knoxss_api" -s \
